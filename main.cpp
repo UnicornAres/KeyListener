@@ -3,17 +3,14 @@
 #include <windows.h>
 
 using namespace std;
-
-bool keyPressed = false;
+using std::thread;
 
 int main(){
-
     while(true){
-        keyPressed = (GetKeyState(VK_SHIFT) & 0x8000) != 0;
-        if (!keyPressed){
-            cout << "0";
-        } else {
+        if ((GetKeyState(VK_SHIFT) & 0x8000) != 0){
             cout << "1";
+        } else {
+            cout << "0";
         }
         this_thread::sleep_for(chrono::milliseconds(100));
     }
