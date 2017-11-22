@@ -6,18 +6,10 @@ using namespace std;
 
 bool keyPressed = false;
 
-void keyListener(){
-    while (true){
-        keyPressed = (GetKeyState(VK_SHIFT) & 0x8000) != 0;
-    }
-}
-
 int main(){
 
-    thread thread(keyListener);
-    thread.detach();
-
     while(true){
+        keyPressed = (GetKeyState(VK_SHIFT) & 0x8000) != 0;
         if (!keyPressed){
             cout << "0";
         } else {
@@ -25,6 +17,4 @@ int main(){
         }
         this_thread::sleep_for(chrono::milliseconds(100));
     }
-
-    return 0;
 }
