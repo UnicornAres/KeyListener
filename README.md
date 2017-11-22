@@ -1,2 +1,2 @@
 # KeyListener
-KeyListener C++
+KeyListener C++. Action on SHIFT pressed event.
