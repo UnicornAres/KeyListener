@@ -1,4 +1,3 @@
-#include <thread>
 #include <iostream>
 #include <windows.h>
 
@@ -11,6 +10,5 @@ int main(){
         } else {
             cout << "0";
         }
-        this_thread::sleep_for(chrono::milliseconds(100));
     }
 }
