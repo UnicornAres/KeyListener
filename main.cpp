@@ -3,7 +3,6 @@
 #include <windows.h>
 
 using namespace std;
-using std::thread;
 
 int main(){
     while(true){
